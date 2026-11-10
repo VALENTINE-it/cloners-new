@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hacker News Vanguard // Minimalist Reader & Live Feed</title>
+  <link rel="stylesheet" href="src/styles/main.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-content">
+      <div class="brand">
+        <h1>HN VANGUARD</h1>
+        <span class="badge live-indicator" id="live-indicator">LIVE FEED ACTIVE</span>
+      </div>
+      <nav class="feed-nav" id="feed-nav">
+        <button class="nav-btn active" data-feed="top">Top</button>
+        <button class="nav-btn" data-feed="new">New</button>
+        <button class="nav-btn" data-feed="best">Best</button>
+        <button class="nav-btn" data-feed="job">Jobs</button>
+      </nav>
+    </div>
+  </header>
+
+  <div id="live-banner-container"></div>
+
+  <main class="main-layout">
+    <section class="feed-section">
+      <div id="feed-container" class="feed-list">
+        <!-- Posts render here -->
+      </div>
+      <div class="load-more-wrap">
+        <button id="load-more-btn" class="btn primary">Load More Stories</button>
+      </div>
+    </section>
+
+    <aside class="sidebar">
+      <div class="card stats-card">
+        <h3>Vanguard Stats</h3>
+        <p>Active Feed: <span id="stat-feed">Top Stories</span></p>
+        <p>Loaded Items: <span id="stat-count">0</span></p>
+        <p>Cached Payload: <span id="stat-cache">0 items</span></p>
+      </div>
+    </aside>
+  </main>
+
+  <div id="modal-container" class="modal-backdrop hidden">
+    <div class="modal-window">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script type="module" src="src/js/app.js"></script>
+</body>
+</html>
